@@ -26,12 +26,18 @@ $transition: cubic-bezier(.1, .7, .1, 1);
       width: 1145px;
       height: 100%;
 
-      .card {
+      .card1,
+      .card2,
+      .card3,
+      .card4,
+      .card5,
+      .card6,
+      .card7,
+      .card8,
+      .card9 {
         background-color: rgba(255, 255, 255, 0.494);
         width: calc($index * 10);
         height: calc($index * 10);
-
-
         background-size: cover;
         background-position: center;
         cursor: pointer;
@@ -45,55 +51,269 @@ $transition: cubic-bezier(.1, .7, .1, 1);
         .title {}
       }
 
-      // .card::before,
-      // .card::after {
-      //   content: '';
-      //   position: absolute;
-      //   width: 20px;
-      //   height: 100%;
-      //   right: calc($index * -1);
-      // }
+      .card::before,
+      .card::after {
+        content: '';
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        right: calc($index * -0.5);
+      }
 
-      // .card::after {
-      //   left: calc($index* -2);
-      // }
+      .card::after {
+        left: calc($index* -0.5);
+      }
 
-      .card:hover {
+      .card1:hover,
+      .card2:hover,
+      .card3:hover,
+      .card4:hover,
+      .card5:hover,
+      .card6:hover,
+      .card7:hover,
+      .card8:hover,
+      .card9:hover {
         transform: translateZ(calc($index* 3));
         z-index: 10;
       }
 
-      // .card:hover+* {
-      //   transform: translateZ(calc($index* 8.5)) rotateY(20deg);
-      //   z-index: -1;
-      // }
+      .card1:hover+.card2 {
+        transform: translateZ(calc($index /4)) rotateY(10deg);
+        z-index: -1;
+      }
 
-      // .card:hover+*+* {
-      //   transform: translateZ(calc($index* 4.5)) rotateY(25deg);
-      //   z-index: -2;
-      // }
+      .card1:hover+.card2+* {
+        transform: translateX(calc($index /-13)) rotateY(1deg);
+        z-index: -1;
+      }
 
-      // .card:hover+*+*+* {
-      //   transform: translateZ(calc($index /4)) rotateY(28deg);
-      //   z-index: -3;
-      // }
+      .card1:hover+.card2+*+* {
+        transform: translateY(calc($index /-4)) rotateX(-10deg);
+        z-index: -1;
+      }
+
+      .card1:hover+.card2+.card3+*+* {
+        transform: translateY(calc($index *-0.2)) translateX(calc($index *-0.2)) rotateX(-10deg)rotateY(5deg);
+        z-index: -1;
+      }
+
+      .card2:hover+.card3 {
+        transform: translateZ(calc($index /4)) rotateY(7deg);
+        z-index: -1;
+      }
+
+      .card2:hover+.card3+*+* {
+        transform: translateY(calc($index /-4)) rotateX(-10deg);
+        z-index: -1;
+      }
+
+      .card2:hover+.card3+* {
+        transform: translateY(calc($index *-0.1)) translateX(calc($index *0.2)) rotateX(5deg)rotateY(-10deg);
+        z-index: -1;
+      }
+
+      .card2:hover+.card3+*+*+* {
+        transform: translateY(calc($index *-0.1)) translateX(calc($index *-0.2)) rotateY(10deg)rotateX(5deg);
+        z-index: -1;
+      }
 
 
-      // .card:has(+ :hover) {
-      //   transform: translateZ(calc($index* 8.5)) rotateY(-20deg);
-      //   z-index: -1;
-      // }
 
-      // .card:has(+ * + :hover) {
-      //   transform: translateZ(calc($index* 4.5)) rotateY(-25deg);
-      //   z-index: -2;
-      // }
+      .card3:hover+.card4+* {
+        transform: translateY(calc($index *-0.2)) translateX(calc($index *0.2)) rotateY(-10deg)rotateX(-5deg);
+        ;
+        z-index: -1;
+      }
 
-      // .card:has(+ * + * + :hover) {
-      //   transform: translateZ(calc($index /4)) rotateY(-28deg);
-      //   z-index: -3;
-      // }
 
+      .card3:hover+.card4+*+* {
+        transform: translateY(calc($index /-4)) rotateX(-10deg);
+        z-index: -1;
+      }
+
+
+      .card4:hover+.card5 {
+        transform: translateZ(calc($index /4)) rotateY(10deg);
+        z-index: -1;
+      }
+
+      .card4:hover+.card5+* {
+        transform: translateX(calc($index /-13)) rotateY(1deg);
+        z-index: -1;
+      }
+
+      .card4:hover+.card5+*+* {
+        transform: translateY(calc($index /-4)) rotateX(-10deg);
+        z-index: -1;
+      }
+
+      .card4:hover+.card5+*+*+* {
+        transform: translateY(calc($index *-0.2)) translateX(calc($index *-0.2)) rotateX(-10deg)rotateY(5deg);
+        z-index: -1;
+      }
+
+      .card5:hover+.card6 {
+        transform: translateZ(calc($index *0.1)) rotateY(7deg);
+        z-index: -1;
+      }
+
+      .card5:hover+.card6+*+* {
+        transform: translateY(calc($index *-0.1)) rotateX(-10deg);
+        z-index: -1;
+      }
+
+      .card5:hover+.card6+* {
+        transform: translateY(calc($index *-0.2)) translateX(calc($index *0.2)) rotateY(-10deg)rotateX(-5deg);
+        ;
+        z-index: -1;
+      }
+
+      .card5:hover+.card6+*+*+* {
+        transform: translateY(calc($index *-0.2)) translateX(calc($index *-0.2)) rotateY(10deg)rotateX(-5deg);
+        z-index: -1;
+      }
+
+      .card6:hover+.card7+* {
+        transform: translateY(calc($index *-0.2)) translateX(calc($index *0.1)) rotateY(-10deg)rotateX(-5deg);
+        ;
+        z-index: -1;
+      }
+
+
+      .card6:hover+.card7+*+* {
+        transform: translateY(calc($index /-4)) rotateX(-10deg);
+        z-index: -1;
+      }
+
+      .card7:hover+.card8 {
+        transform: translateX(calc($index *-0.1)) rotateY(10deg);
+        z-index: -1;
+      }
+
+      .card7:hover+.card8+* {
+        transform: translateX(calc($index *-0.1)) rotateY(2deg);
+        z-index: -1;
+      }
+
+      .card8:hover+* {
+        transform: translateX(calc($index *-0.1)) rotateY(10deg);
+        z-index: -1;
+      }
+    
+
+      .card1:has(+ :hover) {
+        transform: translateZ(calc($index /4)) rotateY(-5deg);
+        z-index: -1;
+      }
+
+      .card1:has(+*+ :hover) {
+        transform: translateX(calc($index /4)) rotateY(-2deg);
+        z-index: -1;
+      }
+
+      .card1:has(+*+*+*+ :hover) {
+        transform: translateY(calc($index *0.2)) translateX(calc($index *0.2)) rotateX(10deg)rotateY(-5deg);
+        z-index: -1;
+      }
+
+      .card1:has(+*+*+ :hover) {
+        transform: translateY(calc($index *0.2)) translateX(calc($index *0.2)) rotateX(10deg)rotateY(-5deg);
+        z-index: -1;
+      }
+
+      .card2:has(+ :hover) {
+
+        transform: translateZ(calc($index /4)) rotateY(-10deg);
+        z-index: -1;
+      }
+
+      .card2:has(+*+*+ :hover) {
+
+        transform: translateY(calc($index *0.1)) rotateX(10deg);
+
+        z-index: -1;
+      }
+
+      .card2:has(+*+*+*+ :hover) {
+
+        transform: translateY(calc($index *0.2)) translateX(calc($index *0.1)) rotateX(5deg)rotateY(-10deg);
+
+        z-index: -1;
+      }
+
+      .card2:has(+*+ :hover) {
+
+        transform: translateY(calc($index *0.2)) translateX(calc($index *-0.1)) rotateX(10deg)rotateY(5deg);
+
+        z-index: -1;
+      }
+
+      .card3:has(+*+ :hover) {
+
+        transform: translateY(calc($index *0.2)) translateX(calc($index *-0.2)) rotateX(10deg)rotateY(5deg);
+        z-index: -1;
+      }
+
+      .card3:has(+*+*+ :hover) {
+
+        transform: translateY(calc($index *0.2)) translateX(calc($index *-0.2)) rotateX(10deg)rotateY(5deg);
+        z-index: -1;
+      }
+
+      .card4:has(+*+ :hover) {
+        transform: translateX(calc($index *0.2)) rotateY(-5deg);
+        z-index: -1;
+      }
+
+      .card4:has(+*+*+ :hover) {
+        transform: translateY(calc($index *0.2)) rotateX(5deg);
+        z-index: -1;
+      }
+
+      .card5:has(+ :hover) {
+        transform: translateZ(calc($index *0.3)) rotateY(-10deg);
+        z-index: -1;
+      }
+
+      .card5:has(+*+ :hover) {
+        transform: translateZ(calc($index *0.3)) rotateY(10deg);
+        z-index: -1;
+      }
+      .card5:has(+*+*+ :hover) {
+        transform: translateY(calc($index *0.3)) rotateX(10deg);
+        z-index: -1;
+      }
+      .card6:has(+*+ :hover) {
+        transform: translateX(calc($index *-0.3)) translateY(calc($index *0.2)) rotateY(10deg) rotateY(2deg);
+        z-index: -2;
+      }
+
+      .card7:has(+:hover) {
+        transform: translateX(calc($index *0.2)) rotateY(-10deg);
+        z-index: -1;
+      }
+      
+      .card4:has(+*+*+*+ :hover) {
+        transform: translateY(calc($index *0.2))translateX(calc($index *0.2)) rotateX(5deg);
+        z-index: -2;
+      }
+      .card7:has(+*+:hover) {
+        transform: translateX(calc($index *0.2)) rotateY(-5deg);
+        z-index: -1;
+      }
+      .card8:has(+:hover) {
+        transform: translateX(calc($index *0.2)) rotateY(-10deg);
+        z-index: -1;
+      }
+      .card6:has(+*+*+:hover) {
+        transform: translateY(calc($index *0.2)) rotateX(5deg);
+        z-index: -1;
+      }
+  
+      .card5:has(+*+*+*+ :hover) {
+        transform: translateY(calc($index *0.2))translateX(calc($index *0.2)) rotateX(5deg);
+        z-index: 1;
+      }
       // .card:hover,
       // .card:focus {
       //   // width: calc($index *10);
@@ -125,14 +345,17 @@ $transition: cubic-bezier(.1, .7, .1, 1);
     }
   }
 }
-@media (max-width: 1100px) {
+
+@media (min-width: 50px) {
   .cardMenuWrapper {
     .cardContainer {
       overflow-x: hidden;
 
       .cardWrapper {
-       font-size: large;
-       color: aliceblue;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: large;
+        color: aliceblue;
       }
     }
   }
